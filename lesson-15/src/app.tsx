@@ -1,9 +1,12 @@
 import Counter from './counter';
+import { CounterProvider } from './context/counter-context';
 
 function App() {
 	return (
 		<>
-			<Counter>{(num: number) => <>Current Count: {num}</>}</Counter>
+			<CounterProvider>
+				<Counter>{(num: number) => <>Current Count: {num}</>}</Counter>
+			</CounterProvider>
 		</>
 	);
 }
